@@ -17,37 +17,61 @@ let products = [
     {
         id: 1,
         name: 'Potato',
-        image: 'Cooking Pal.png',
+        image: 'https://www.thesenior.com.au/images/transform/v1/crop/frm/172374647/732e67e9-8c4d-44b0-bf6e-7947c11c2974.jpeg/r0_0_5000_2811_w1200_h678_fmax.jpg',
         price: 120000
     },
     {
         id: 2,
         name: 'Tomato',
-        image: 'tomato.png',
+        image: 'https://img2.exportersindia.com/product_images/bc-full/2019/10/6584025/fresh-tomato-1571037554-5115005.jpeg',
         price: 120000
     },
     {
         id: 3,
-        name: 'PRODUCT NAME 3',
-        image: 'https://res.cloudinary.com/dm6wjacnw/image/upload/v1697659320/re3hzodscsydhai6jsie.png',
+        name: 'Onion',
+        image: 'https://5.imimg.com/data5/ES/NA/MY-10133939/big-size-onion-500x500.jpg',
         price: 220000
     },
     {
         id: 4,
-        name: 'PRODUCT NAME 4',
-        image: 'https://res.cloudinary.com/dm6wjacnw/image/upload/v1697659320/re3hzodscsydhai6jsie.png',
+        name:  'Small Onions',
+        image: 'https://www.greendna.in/cdn/shop/products/onion_e5012b99-3371-4b2c-a690-d06dc409a6d5_1200x1200.jpg?v=1594886707',
         price: 123000
     },
     {
         id: 5,
-        name: 'PRODUCT NAME 5',
-        image: 'https://res.cloudinary.com/dm6wjacnw/image/upload/v1697659320/re3hzodscsydhai6jsie.png',
+        name: 'Garlic',
+        image: 'https://hawthornfarm.ca/cdn/shop/files/music10_1024x1024@2x.jpg?v=1691163112',
         price: 320000
     },
     {
         id: 6,
-        name: 'PRODUCT NAME 6',
-        image: 'https://res.cloudinary.com/dm6wjacnw/image/upload/v1697659320/re3hzodscsydhai6jsie.png',
+        name: 'Lemon',
+        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWi78W4GmPTiQfxGmQD9XXaIKY8aIME2Oscg&usqp=CAU',
+        price: 120000
+    },
+    {
+        id: 7,
+        name: 'Honey',
+        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTl5gTgjmiNhjb6_zJh61AG6hHWFaPeIczbrA&usqp=CAU',
+        price: 120000
+    },
+    {
+        id: 8,
+        name: 'Vegetable oil',
+        image: 'https://cdn.cdnparenting.com/articles/2021/03/16184136/1680944782.webp',
+        price: 120000
+    },
+    {
+        id: 9,
+        name: 'Curd',
+        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMl8KAGbZgbzM3OIHGT7bYCtqwnf-3RbCE9A&usqp=CAU',
+        price: 120000
+    },
+    {
+        id: 10,
+        name: 'Butter',
+        image: 'https://i0.wp.com/post.healthline.com/wp-content/uploads/2021/04/butter-curls-1296x728-header.jpg?w=1155&h=1528',
         price: 120000
     }
 ];
@@ -83,7 +107,7 @@ function reloadCard(){
         if(value != null){
             let newDiv = document.createElement('li');
             newDiv.innerHTML = `
-                <div><img src="image/${value.image}"/></div>
+                <div><img src="${value.image}"/></div>
                 <div>${value.name}</div>
                 <div>${value.price.toLocaleString()}</div>
                 <div>
@@ -104,5 +128,5 @@ function changeQuantity(key, quantity){
         listCards[key].quantity = quantity;
         listCards[key].price = quantity * products[key].price;
     }
-    reloadCard();
+    reloadCard();
 }
